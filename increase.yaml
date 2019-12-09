@@ -1,0 +1,14 @@
+---
+- name: 'Increase size of /var/log/audit'
+  hosts: '{{nodes}}'
+  become: yes
+  tasks:
+   - name: 'Increase size'
+     lvol:
+      vg: '{{vg}}'
+      lv: '{{lv}}'
+      size: '{{size}}'
+      force: yes
+
+   - name: 'Resize filesystem'
+     command: "xfs_growfs /dev/mapper/{{vg}}-{{lv}}"

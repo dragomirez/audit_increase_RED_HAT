@@ -1,6 +1,6 @@
 Usage:
 
-Firs, lets perform check wit: ansible-playbook increase.yaml -i hosts -e nodes=(enter node name) -e vg=(enter vg) -e lv=(enter lv) -e size=(enter size) --check
+Firs, let's perform check wit: ansible-playbook increase.yaml -i hosts -e nodes=(enter node name) -e vg=(enter vg) -e lv=(enter lv) -e size=(enter size) --check
 
 p.s. dont forget "m" for MB and "g" for GB then:
 
